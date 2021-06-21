@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Gif grid item component should render correct 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="Hisoka"
+    src="https://media2.giphy.com/media/IurNlhZHaj7TG/giphy.gif?cid=0d1d774aq1fu4tgx2iu14xoqgouduy4l29blwubi4j2icdha&rid=giphy.gif&ct=g"
+  />
+  <p>
+    Hisoka
+  </p>
+</div>
+`;

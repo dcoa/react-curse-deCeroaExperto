@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in GifExpertApp should render on match with snapshot 1`] = `
+<Fragment>
+  <h2>
+    Gif Expert App
+  </h2>
+  <AddCategory
+    setCategory={[Function]}
+  />
+  <hr />
+  <ul>
+    <GifGrid
+      Category="Gintama"
+      key="Gintama"
+    >
+      Gintama
+    </GifGrid>
+  </ul>
+</Fragment>
+`;

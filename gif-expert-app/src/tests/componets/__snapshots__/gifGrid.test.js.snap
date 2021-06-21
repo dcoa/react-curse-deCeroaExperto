@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing in gifGrid.js should render correct 1`] = `
+<Fragment>
+  <h3>
+    one piece
+  </h3>
+  <div
+    className="card-grid"
+  >
+    Cargandoo...
+  </div>
+</Fragment>
+`;

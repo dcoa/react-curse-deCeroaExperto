@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Add Category component should render correct 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Escribe lo que quieres buscar y presiona \\"Enter\\""
+      type="text"
+      value=""
+    />
+  </form>
+</Fragment>
+`;
