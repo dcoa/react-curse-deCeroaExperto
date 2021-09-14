@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CounterWithCostmHook } from './components/01-useState/CounterWithCostmHook';
+import { SimpleForm } from './components/02-useEffect/SimpleForm';
+//import { CounterWithCostmHook } from './components/01-useState/CounterWithCostmHook';
 //import { CounterApp } from './components/01-useState/CounterApp';
 //import { HookApp } from './HookApp';
 
 ReactDOM.render(
-    <CounterWithCostmHook />,
+    <SimpleForm />,
   document.getElementById('root')
 );
 
