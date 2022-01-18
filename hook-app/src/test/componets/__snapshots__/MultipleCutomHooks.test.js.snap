@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on MultipleCutomHooks component should render  1`] = `
+<div>
+  <h1>
+    Bracking Bad Quotes
+  </h1>
+  <div
+    className="alert alert-info text-center"
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Test on MultipleCutomHooks component should show the information about the quote 1`] = `
+<div>
+  <h1>
+    Bracking Bad Quotes
+  </h1>
+  <blockquote
+    className="blockquote text-right"
+  >
+    <p
+      className="ab-0"
+    >
+      Habia una vez
+    </p>
+    <footer
+      className="blockquote-footer"
+    >
+      Jhon Doe
+    </footer>
+  </blockquote>
+  <button
+    className="btn btn-secondary"
+    onClick={[Function]}
+  >
+    Next quote
+  </button>
+</div>
+`;

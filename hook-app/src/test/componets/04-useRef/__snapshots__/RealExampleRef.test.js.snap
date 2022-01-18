@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on RealExampleRef should render the component 1`] = `
+<div>
+  <h1>
+    useRef real use case
+  </h1>
+  <hr />
+  <button
+    className=" btn btn-outline-success mb-5"
+    onClick={[Function]}
+  >
+    Show quotes
+  </button>
+</div>
+`;
+
+exports[`Test on RealExampleRef should show the component MultipleCutomHooks 1`] = `
+<div>
+  <h1>
+    useRef real use case
+  </h1>
+  <hr />
+  <button
+    className=" btn btn-outline-success mb-5"
+    onClick={[Function]}
+  >
+    Show quotes
+  </button>
+  <MultipleCutomHooks />
+</div>
+`;

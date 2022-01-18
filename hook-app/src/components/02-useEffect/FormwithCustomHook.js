@@ -1,6 +1,6 @@
 import React from 'react'
 import "./form.css";
-import { useForm } from './useForm';
+import { useForm } from '../../hooks/useForm';
 
 
 export const FormwithCustomHook = () => {

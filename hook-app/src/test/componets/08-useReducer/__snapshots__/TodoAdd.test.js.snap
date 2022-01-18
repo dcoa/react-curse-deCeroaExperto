@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on TodoAdd should show correctly 1`] = `
+<Fragment>
+  <h4>
+    Agregar nueva tarea
+  </h4>
+  <form
+    className="d-grid gap-2 d-md-block"
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="form-control"
+      name="description"
+      onChange={[Function]}
+      placeholder="Nueva tarea"
+      type="text"
+      value=""
+    />
+    <button
+      className="btn btn-outline-success mt-2"
+      type="submit"
+    >
+      Agregar
+    </button>
+  </form>
+</Fragment>
+`;
