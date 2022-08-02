@@ -2,9 +2,9 @@ import { createTheme } from '@mui/material'
 import { red } from '@mui/material/colors'
 
 export const defaultTheme = createTheme({
-    pallete: {
+    palette: {
         primary: {
-            main: '#262254'
+            main: '#581845'
         },
         secondary: {
             main: '#543884'
