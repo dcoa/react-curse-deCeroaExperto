@@ -32,7 +32,7 @@ function App() {
         </button>
         <button onClick={ () => dispatch( incrementByAmount(Number(amount.current.value) || 0) ) }>
           Increment by 
-          <input type='number' ref={amount}  />
+          <input type='number' ref={amount} style={{width: '50px'}} />
         </button>
       </div>
     </div>
