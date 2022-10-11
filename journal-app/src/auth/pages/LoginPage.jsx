@@ -1,12 +1,33 @@
 import { AuthLayout } from '../layout/AuthLayout'
-import { Button, Grid, Link, TextField, Typography } from '@mui/material'
+import { Button, Grid, Link, TextField } from '@mui/material'
 import { Google } from '@mui/icons-material'
 import { Link as RouterLink } from 'react-router-dom'
+import { useForm } from '../../hook'
+import { checkingAuthentication, startGoogleSingIn } from '../../store/auth/'
+import { useDispatch } from 'react-redux'
+
 
 export const LoginPage = () => {
+
+  const dispatch = useDispatch()
+  const { email, password, onInputChange } = useForm({
+    email: 'example@example.com',
+    password: '1234'
+  })
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    dispatch( checkingAuthentication(email, password) )
+  }
+
+  const onGoogleSignIn = () => {
+    dispatch( startGoogleSingIn() )
+
+
+  }
   return (
     <AuthLayout titlePage="Login">
-      <form>
+      <form onSubmit={ onSubmit }>
         <Grid container >
           <Grid item xs={12} sx={{ mt: 2 }} >
             <TextField
@@ -14,6 +35,9 @@ export const LoginPage = () => {
               type="email"
               placeholder="email@example.com"
               fullWidth
+              name="email"
+              value={ email }
+              onChange={ onInputChange }
             />
           </Grid>
           <Grid item xs={12} sx={{ mt: 2 }}  >
@@ -22,6 +46,9 @@ export const LoginPage = () => {
               type="password"
               placeholder="password"
               fullWidth
+              name="password"
+              value={ password }
+              onChange={ onInputChange }
             />
           </Grid>
           <Grid
@@ -32,6 +59,7 @@ export const LoginPage = () => {
               <Button
                 variant='contained'
                 fullWidth
+                type='submit'
               >
                 Login
               </Button>
@@ -40,6 +68,7 @@ export const LoginPage = () => {
               <Button
                 variant='contained'
                 fullWidth
+                onClick={ onGoogleSignIn }
               >
                 <Google sx={{ mr: 1, width: '1rem' }} />
                 Google login
