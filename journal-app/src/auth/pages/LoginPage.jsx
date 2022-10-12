@@ -4,17 +4,19 @@ import { Google } from '@mui/icons-material'
 import { Link as RouterLink } from 'react-router-dom'
 import { useForm } from '../../hook'
 import { checkingAuthentication, startGoogleSingIn } from '../../store/auth/'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useMemo } from 'react'
 
 
 export const LoginPage = () => {
 
+  const { status } = useSelector(state => state.auth) 
   const dispatch = useDispatch()
   const { email, password, onInputChange } = useForm({
     email: 'example@example.com',
     password: '1234'
   })
-
+  const isAuthenticated = useMemo(() => status === 'checking', [status])
   const onSubmit = (event) => {
     event.preventDefault()
     dispatch( checkingAuthentication(email, password) )
@@ -22,8 +24,6 @@ export const LoginPage = () => {
 
   const onGoogleSignIn = () => {
     dispatch( startGoogleSingIn() )
-
-
   }
   return (
     <AuthLayout titlePage="Login">
@@ -60,6 +60,7 @@ export const LoginPage = () => {
                 variant='contained'
                 fullWidth
                 type='submit'
+                disabled={ isAuthenticated }
               >
                 Login
               </Button>
@@ -69,6 +70,7 @@ export const LoginPage = () => {
                 variant='contained'
                 fullWidth
                 onClick={ onGoogleSignIn }
+                disabled={ isAuthenticated }
               >
                 <Google sx={{ mr: 1, width: '1rem' }} />
                 Google login
